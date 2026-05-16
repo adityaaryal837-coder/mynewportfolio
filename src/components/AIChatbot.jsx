@@ -35,13 +35,13 @@ const AIChatbot = () => {
   };
 
   return (
-    <div className="fixed bottom-8 right-8 z-[60]">
+    <div className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-[60]">
       {/* Floating Button */}
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-16 h-16 bg-primary rounded-full shadow-2xl flex items-center justify-center text-white relative overflow-hidden group"
+        className="w-14 h-14 sm:w-16 sm:h-16 bg-primary rounded-full shadow-2xl flex items-center justify-center text-white relative overflow-hidden group"
       >
         <div className="absolute inset-0 bg-gradient-to-tr from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
         {isOpen ? <X className="relative z-10" /> : <MessageSquare className="relative z-10" />}
@@ -54,7 +54,7 @@ const AIChatbot = () => {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="absolute bottom-20 right-0 w-[350px] md:w-[400px] h-[500px] glass-card flex flex-col shadow-2xl backdrop-blur-2xl border-white/20"
+            className="absolute bottom-16 sm:bottom-20 right-0 w-[calc(100vw-2rem)] sm:w-[350px] md:w-[400px] h-[450px] sm:h-[500px] glass-card flex flex-col shadow-2xl backdrop-blur-2xl border-white/20"
           >
             {/* Header */}
             <div className="p-4 border-b border-white/10 flex items-center space-x-3 bg-white/5">

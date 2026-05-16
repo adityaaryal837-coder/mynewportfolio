@@ -28,7 +28,7 @@ const Experience = () => {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-primary-light text-sm mb-8 tracking-tighter">&gt; git log --oneline</h2>
         
-        <div className="space-y-4 relative border-l border-editor-border ml-4 pl-8">
+        <div className="space-y-4 relative border-l border-editor-border ml-2 sm:ml-4 pl-6 sm:pl-8">
           {experiences.map((exp, i) => (
             <motion.div
               key={exp.company}
@@ -39,15 +39,15 @@ const Experience = () => {
               className="relative group"
             >
               {/* Git commit dot */}
-              <div className="absolute left-[-37px] top-1.5 w-4 h-4 rounded-full bg-editor-bg border-2 border-primary group-hover:scale-125 transition-transform z-10" />
+              <div className="absolute left-[-29px] sm:left-[-37px] top-1.5 w-4 h-4 rounded-full bg-editor-bg border-2 border-primary group-hover:scale-125 transition-transform z-10" />
               
-              <div className="bg-editor-sidebar border border-editor-border p-6 rounded-xl hover:border-primary/30 transition-all shadow-xl">
-                <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                  <span className="text-primary font-bold text-lg">{exp.company}</span>
-                  <span className="text-xs text-editor-text bg-white/5 px-2 py-1 rounded">{exp.period}</span>
+              <div className="bg-editor-sidebar border border-editor-border p-4 sm:p-6 rounded-xl hover:border-primary/30 transition-all shadow-xl">
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-2">
+                  <span className="text-primary font-bold text-base sm:text-lg">{exp.company}</span>
+                  <span className="text-[10px] sm:text-xs text-editor-text bg-white/5 px-2 py-1 rounded w-fit">{exp.period}</span>
                 </div>
-                <h4 className="text-editor-activeText text-sm mb-4">{exp.role}</h4>
-                <p className="text-editor-text text-sm leading-relaxed font-inter">{exp.description}</p>
+                <h4 className="text-editor-activeText text-xs sm:text-sm mb-4">{exp.role}</h4>
+                <p className="text-editor-text text-xs sm:text-sm leading-relaxed font-inter">{exp.description}</p>
               </div>
             </motion.div>
           ))}

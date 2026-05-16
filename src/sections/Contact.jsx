@@ -51,7 +51,7 @@ const Contact = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-editor-sidebar border border-editor-border rounded-xl p-8 relative overflow-hidden"
+            className="bg-editor-sidebar border border-editor-border rounded-xl p-6 sm:p-8 relative overflow-hidden"
           >
             <form 
               action="https://formspree.io/f/xlgzqdav" 

@@ -38,7 +38,7 @@ const Hero = () => {
 
           <div className="text-accent mb-10">{'}'};</div>
           
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8 font-inter">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-8 font-inter">
             Building the <br />
             <span className="text-gradient">Future of Web</span> <br />
             with Precision.
@@ -49,7 +49,7 @@ const Hero = () => {
               href="/projects"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded-lg font-bold flex items-center space-x-2 transition-all shadow-lg shadow-primary/25"
+              className="px-5 py-2.5 sm:px-6 sm:py-3 bg-primary hover:bg-primary-dark text-white rounded-lg font-bold flex items-center space-x-2 transition-all shadow-lg shadow-primary/25 text-sm sm:text-base"
             >
               <span>Explore Projects</span>
               <ArrowRight size={18} />
@@ -60,7 +60,7 @@ const Hero = () => {
               download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 border border-editor-border hover:bg-white/5 text-editor-activeText rounded-lg font-bold flex items-center space-x-2 transition-all"
+              className="px-5 py-2.5 sm:px-6 sm:py-3 border border-editor-border hover:bg-white/5 text-editor-activeText rounded-lg font-bold flex items-center space-x-2 transition-all text-sm sm:text-base"
             >
               <Download size={18} />
               <span>Download CV</span>
@@ -69,7 +69,7 @@ const Hero = () => {
         </motion.div>
 
         {/* Hero Visuals / Code Block */}
-        <div className="relative">
+        <div className="relative mt-8 lg:mt-0">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -84,7 +84,7 @@ const Hero = () => {
               </div>
               <span className="text-[10px] text-editor-text uppercase tracking-widest">welcome.js</span>
             </div>
-            <div className="p-6 text-sm leading-relaxed overflow-x-auto">
+            <div className="p-4 sm:p-6 text-xs sm:text-sm leading-relaxed overflow-x-auto">
               <pre className="text-editor-text">
                 <code>
                   <span className="text-purple-400">import</span> {'{'} <span className="text-blue-400">Creative</span> {'}'} <span className="text-purple-400">from</span> <span className="text-green-400">'@aditya/vision'</span>;
@@ -101,11 +101,11 @@ const Hero = () => {
             </div>
           </motion.div>
           
-          {/* Floating badge */}
+          {/* Floating badge - hidden on mobile to reduce clutter */}
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 4, repeat: Infinity }}
-            className="absolute -bottom-6 -right-6 glass-card p-4 border border-primary/30 shadow-xl"
+            className="absolute -bottom-6 -right-6 glass-card p-3 sm:p-4 border border-primary/30 shadow-xl hidden sm:block"
           >
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
